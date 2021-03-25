@@ -1,0 +1,44 @@
+<h3 class="text-primary">Products</h3>
+
+<table id="data" class="table table-bordered table-hover table-primary table-responsive-md">
+    <thead class="text-center align-middle">
+      <tr class="bg-dark text-light">
+      <th>#</th>
+      <th>Product Name</th>
+      <th>Stock Quantity</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th>Items Count</th>
+      <th>Details</th>
+      <th>Buy</th>
+      </tr>
+    </thead>
+
+    <tbody class="text-center align-middle">
+      <!-- <tr class="align-middle" *ngFor="let item of getProductsByCatID(); let i = index" [hidden] = "item.Quantity <= 0" [ngStyle]="{'background-color': item.Quantity === 1? 'yellow': 'white'}"> -->
+      <tr class="align-middle" *ngFor="let item of ProductListOfSelCat; let i = index" [hidden] = "item.Quantity <= 0" [ngStyle]="{'background-color': item.Quantity === 1? 'yellow': 'white'}">
+
+        <td class="align-middle">{{i+1}}</td>
+        <td class="align-middle" [ngSwitch]="SelectedCategory">{{item?.Name}}
+          <span *ngSwitchCase= "1" ><span class="badge badge-warning">Mobiles</span></span>
+          <span *ngSwitchCase= "2" ><span class="badge badge-warning">Tablets</span></span>
+          <span *ngSwitchCase= "3" ><span class="badge badge-warning">Laptops</span></span>
+          <span *ngSwitchCase= "4" ><span class="badge badge-warning">Clothes</span></span>
+          <span *ngSwitchCase= "5" ><span class="badge badge-warning">Sports</span></span>
+          <span *ngSwitchDefault ></span>
+        </td>
+        <td class="align-middle">{{item.Quantity}}</td>
+        <td class="align-middle">{{item.Price | currency :'EGP' : 'symbol' : '1.0-0' }}</td>
+        <td class="align-middle"><img src="{{item.Img}}" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" style="width: 70px;" alt=""></td>
+        <td class="text-center align-middle"> <input #quantity type="number" value="1" class="form-control" style="width: 70px; margin-left: auto; margin-right: auto;" min="1" max="{{item.Quantity}}" id="numOfItems"> </td>
+        <td class="align-middle"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cartModal" (click) = "viewProduct(item.id); ">Details</button></td>
+        <td class="align-middle"><button type="button" class="btn btn-success" (click) = "CalcTotal(item.Price, quantity.value, item.Name); item.Quantity = item.Quantity - UpdateQuantity(quantity.value)">Buy</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+      <h5 class="text-secondary">Total (inside Child): {{OrderTotalPrice | currency :'EGP' : 'symbol' : '1.0-0' }}</h5>
+  </div>
+
+  

@@ -1,0 +1,319 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "Name": "Mobiles"
+    },
+    {
+      "id": 2,
+      "Name": "Tablets"
+    },
+    {
+      "id": 3,
+      "Name": "Laptops"
+    },
+    {
+      "id": 4,
+      "Name": "Men Clothes"
+    },
+    {
+      "id": 5,
+      "Name": "Sports"
+    },
+    {
+      "id": 6,
+      "Name": "Accessories"
+    },
+    {
+      "id": 7,
+      "Name": "Electronics"
+    },
+    {
+      "id": 8,
+      "Name": "Women Clothes"
+    }
+  ],
+  "products": [
+    {
+      "id": 9991,
+      "Name": "iPhone XS",
+      "Quantity": 7,
+      "Price": 10000,
+      "Img": "../assets/iphone-x.png",
+      "CategoryID": 1
+    },
+    {
+      "id": 9992,
+      "Name": "Samsung S10",
+      "Quantity": 3,
+      "Price": 8000,
+      "Img": "../assets/samsungS10.png",
+      "CategoryID": 1
+    },
+    {
+      "id": 9993,
+      "Name": "Nokia 1110",
+      "Quantity": 3,
+      "Price": 1000,
+      "Img": "../assets/nokia1110.png",
+      "CategoryID": 1
+    },
+    {
+      "id": 8881,
+      "Name": "IPad Pro",
+      "Quantity": 5,
+      "Price": 15000,
+      "Img": "../assets/IPad.png",
+      "CategoryID": 2
+    },
+    {
+      "id": 8882,
+      "Name": "Samsung Tab",
+      "Quantity": 15,
+      "Price": 9500,
+      "Img": "../assets/SamsungTab.png",
+      "CategoryID": 2
+    },
+    {
+      "id": 8883,
+      "Name": "Lenovo Tablet",
+      "Quantity": 2,
+      "Price": 6000,
+      "Img": "../assets/lenovoTab.png",
+      "CategoryID": 2
+    },
+    {
+      "id": 7771,
+      "Name": "MacBook Air",
+      "Quantity": 9,
+      "Price": 20000,
+      "Img": "../assets/MacBookAir.png",
+      "CategoryID": 3
+    },
+    {
+      "id": 7772,
+      "Name": "Dell Laptop",
+      "Quantity": 6,
+      "Price": 12500,
+      "Img": "../assets/DellLaptop.png",
+      "CategoryID": 3
+    },
+    {
+      "id": 7773,
+      "Name": "Lenovo ThinkPad",
+      "Quantity": 20,
+      "Price": 8499,
+      "Img": "../assets/LenovoLaptop.png",
+      "CategoryID": 3
+    },
+    {
+      "id": 6661,
+      "Name": "T-Shirt",
+      "Quantity": 20,
+      "Price": 399,
+      "Img": "../assets/tshirt.png",
+      "CategoryID": 4
+    },
+    {
+      "id": 6662,
+      "Name": "Sweatshirt",
+      "Quantity": 1,
+      "Price": 250,
+      "Img": "../assets/Sweatshirt.png",
+      "CategoryID": 4
+    },
+    {
+      "id": 6663,
+      "Name": "Pants",
+      "Quantity": 16,
+      "Price": 200,
+      "Img": "../assets/pants.png",
+      "CategoryID": 4
+    },
+    {
+      "id": 6664,
+      "Name": "FoldSack Backpack",
+      "Quantity": 5,
+      "Price": 350,
+      "Img": "../assets/backPack.png",
+      "CategoryID": 4
+    },
+    {
+      "id": 6665,
+      "Name": "Casual Slim Fit T-Shirt",
+      "Quantity": 180,
+      "Price": 199,
+      "Img": "../assets/slimTshirt.png",
+      "CategoryID": 4
+    },
+    {
+      "id": 6666,
+      "Name": "Mens Cotton Jacket",
+      "Quantity": 850,
+      "Price": 29,
+      "Img": "../assets/jacket.png",
+      "CategoryID": 4
+    },
+    {
+      "id": 6667,
+      "Name": "Mens Casual Slim Fit",
+      "Quantity": 50,
+      "Price": 150,
+      "Img": "../assets/slimFit.png",
+      "CategoryID": 4
+    },
+    {
+      "id": 5551,
+      "Name": "Fitness Belts",
+      "Quantity": 1,
+      "Price": 75,
+      "Img": "../assets/Fitness Belts.png",
+      "CategoryID": 5
+    },
+    {
+      "id": 5552,
+      "Name": "Gym Gloves",
+      "Quantity": 10,
+      "Price": 50,
+      "Img": "../assets/gloves.png",
+      "CategoryID": 5
+    },
+    {
+      "id": 5553,
+      "Name": "Jump Ropes",
+      "Quantity": 4,
+      "Price": 20,
+      "Img": "../assets/rope.png",
+      "CategoryID": 5
+    },
+
+    {
+      "id": 4441,
+      "Name": "Silver Dragon Bracelet",
+      "Quantity": 4,
+      "Price": 2000,
+      "Img": "../assets/bracelet.png",
+      "CategoryID": 6
+    },
+    {
+      "id": 4442,
+      "Name": "Silver Petite Micro pavé",
+      "Quantity": 20,
+      "Price": 500,
+      "Img": "../assets/microPave.png",
+      "CategoryID": 6
+    },
+    {
+      "id": 4443,
+      "Name": "White Gold Plated Ring",
+      "Quantity": 14,
+      "Price": 750,
+      "Img": "../assets/ring.png",
+      "CategoryID": 6
+    },
+    {
+      "id": 4444,
+      "Name": "Rose Gold Plated Double Earrings",
+      "Quantity": 4,
+      "Price": 230,
+      "Img": "../assets/earrings.png",
+      "CategoryID": 6
+    },
+    {
+      "id": 3331,
+      "Name": "WD 2TB External HDD - USB 3.0",
+      "Quantity": 22,
+      "Price": 999,
+      "Img": "../assets/wdHdd.png",
+      "CategoryID": 7
+    },
+    {
+      "id": 3332,
+      "Name": "SanDisk SSD 1TB Internal SSD",
+      "Quantity": 6,
+      "Price": 1499,
+      "Img": "../assets/sanDisk.png",
+      "CategoryID": 7
+    },
+    {
+      "id": 3333,
+      "Name": "Silicon Power 256GB SSD",
+      "Quantity": 2,
+      "Price": 1600,
+      "Img": "../assets/siliconPower.png",
+      "CategoryID": 7
+    },
+    {
+      "id": 3334,
+      "Name": "WD 4TB Gaming External Hard Drive",
+      "Quantity": 2,
+      "Price": 1450,
+      "Img": "../assets/wd4.png",
+      "CategoryID": 7
+    },
+    {
+      "id": 3335,
+      "Name": "Acer 21.5 inches Full HD Screen",
+      "Quantity": 204,
+      "Price": 2499,
+      "Img": "../assets/acerScreen.png",
+      "CategoryID": 7
+    },
+    {
+      "id": 3336,
+      "Name": "Samsung 49-Inch Curved Monitor",
+      "Quantity": 2,
+      "Price": 5200,
+      "Img": "../assets/samsungScreen.png",
+      "CategoryID": 7
+    },
+    {
+      "id": 2221,
+      "Name": "Women's 3-in-1 Snowboard Jacket",
+      "Quantity": 1,
+      "Price": 2000,
+      "Img": "../assets/coat.png",
+      "CategoryID": 8
+    },
+    {
+      "id": 2222,
+      "Name": "Women's Removable Hooded Biker Jacket",
+      "Quantity": 9,
+      "Price": 2250,
+      "Img": "../assets/bickerJacket.png",
+      "CategoryID": 8
+    },
+    {
+      "id": 2223,
+      "Name": "Women Striped Climbing Raincoat",
+      "Quantity": 1,
+      "Price": 1100,
+      "Img": "../assets/rainCoat.png",
+      "CategoryID": 8
+    },
+    {
+      "id": 2224,
+      "Name": "MBJ Women's Solid Short Sleeve Boat Neck V",
+      "Quantity": 12,
+      "Price": 110,
+      "Img": "../assets/sleeve.png",
+      "CategoryID": 8
+    },
+    {
+      "id": 2225,
+      "Name": "Women's Short Sleeve Moisture",
+      "Quantity": 19,
+      "Price": 115,
+      "Img": "../assets/moisture.png",
+      "CategoryID": 8
+    },
+    {
+      "id": 2226,
+      "Name": "Women's T Shirt Casual Cotton Short",
+      "Quantity": 31,
+      "Price": 250,
+      "Img": "../assets/womenShirt.png",
+      "CategoryID": 8
+    }
+  ]
+}

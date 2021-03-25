@@ -1,0 +1,101 @@
+<h1>Welcome to {{store.Name}}</h1>
+<img [src]="store.Logo" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" style="width: 70px;" alt="">
+
+<div *ngIf="Discount != 'No Discount'">
+  <h3>We offer an explicit discount of: {{Discount}}</h3>
+</div>
+
+<div class="form-group">
+  <label for="clientName">Client Name:</label>
+  <input type="text" [(ngModel)]="ClientName" class="form-control" name="clientName" id="clientName" aria-describedby="helpId" placeholder="Enter your name here">
+  <h3 id="helpId" class="form-text text-primary">Welcome, {{ClientName}}</h3>
+</div>
+
+<select class="custom-select-lg" name="selectCategory" [(ngModel)]="SelectedCategory">
+  <option (click)="GetSelectedCategory(item.id)" value="{{item.id}}" *ngFor="let item of CategoryList">{{item.Name}}</option>
+
+  <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Select Category
+    </button>
+    <option class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    </option> -->
+</select>
+
+<br><br>
+
+<!-- <h5>Selected Category: {{SelectedCategory}}</h5> <br> -->
+
+<button type="button" class="btn btn-primary" (click) = "Buy()">Buy</button> <br><br>
+
+<div *ngIf="IsPurchased; else elseBlock">
+  <table id="data" class="table table-hover">
+    <thead>
+      <tr class="bg-dark text-light">
+      <!-- <th scope="col">Product ID</th> -->
+      <th scope="col">#</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Stock Quantity</th>
+      <th scope="col">Price</th>
+      <!-- <th scope="col">Category ID</th> -->
+      <th scope="col">Image</th>
+      <th scope="col">#</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of ProductList; let i = index" [hidden] = "item.Quantity == 0" [ngStyle]="{'background-color': item.Quantity === 1? 'yellow': 'white'}">
+        <!-- <td>{{item.id}}</td> -->
+
+        <td *ngIf= "item.CategoryID == SelectedCategory">{{i+1}}</td>
+        <td *ngIf= "item.CategoryID == SelectedCategory" [ngSwitch]="SelectedCategory">{{item?.Name}}
+          <span *ngSwitchCase= "1" ><span class="badge badge-success">Mobiles</span></span>
+          <span *ngSwitchCase= "2" ><span class="badge badge-success">Tablets</span></span>
+          <span *ngSwitchCase= "3" ><span class="badge badge-success">Laptops</span></span>
+          <span *ngSwitchCase= "4" ><span class="badge badge-success">Clothes</span></span>
+          <span *ngSwitchCase= "5" ><span class="badge badge-success">Sports</span></span>
+
+          <span *ngSwitchDefault ></span>
+        </td>
+        <td *ngIf= "item.CategoryID == SelectedCategory">{{item.Quantity}}</td>
+        <td *ngIf= "item.CategoryID == SelectedCategory">{{item.Price | currency: 'EGP'}}</td>
+        <td *ngIf= "item.CategoryID == SelectedCategory"><img src="{{item.Img}}" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" style="width: 70px;" alt=""></td>
+        <td *ngIf= "item.CategoryID == SelectedCategory"><button type="button" class="btn btn-primary" (click) = "item.Quantity = item.Quantity-1">Buy</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #elseBlock><h2 class="text-success">Thanks for purchasing from our Store, {{ClientName}}</h2></ng-template>
+
+
+<br>
+
+
+<div class="form-group">
+    <label for="ccnumber">Credit Card Number:</label>
+    <div class="input-group">
+      <input appValidateInput id="ccnumber" class="form-control" type="text" placeholder="0000 0000 0000 0000">
+    </div>
+    <small id="creditHelp1" class="form-text text-success">*Formatted using custom <b>Directive</b>.</small>
+</div>
+<br>
+
+<div class="form-group">
+  <label>Credit Card Number:</label>
+  <input type="text" [(ngModel)]="CCNumber" id="ccnumber2" class="form-control" type="text" placeholder="0000 0000 0000 0000">
+  <h3 id="helpId" class="form-text text-primary">{{CCNumber | creditNumber}}</h3>
+  <small id="creditHelp2" class="form-text text-success">*Formatted using <b>CreditNumber</b> custom <b>Pipe</b>.</small>
+</div>
+
+
+
+<br>
+<div class="form-group">
+  <label>Egyptian National ID Number:</label>
+  <input type="text" [(ngModel)]="NationalID" id="nationalID" class="form-control" type="text" placeholder="Enter Your National ID Number">
+  <h4 id="helpId" class="form-text text-primary"><span class="text-secondary text-sm-left">Passing 'YY' : </span>{{NationalID | egyID: "YY"}}</h4>
+  <h4 id="helpId" class="form-text text-primary"><span class="text-secondary text-sm-left">Passing 'MM' : </span>{{NationalID | egyID: "MM"}}</h4>
+  <h4 id="helpId" class="form-text text-primary"><span class="text-secondary text-sm-left">Passing 'DD' : </span>{{NationalID | egyID: "DD"}}</h4>
+  <h4 id="helpId" class="form-text text-primary"><span class="text-secondary text-sm-left">Passing 'FullDate' : </span>{{NationalID | egyID: "FullDate"}}</h4>
+  
+  <small id="creditHelp2" class="form-text text-success">*Formatted using <b>EgyID</b> custom <b>Pipe</b>.</small>
+</div>

@@ -1,0 +1,23 @@
+<h2 class="mt-2 text-primary">Add new product</h2>
+
+<label for="prdid">Product ID:</label>
+<input type="number" name="productID" id="prdid" class="form-control mb-2" [(ngModel)]="product.id">
+
+<label for="prdname">Name:</label>
+<input type="text" name="productName" id="prdname" class="form-control mb-2" [(ngModel)]="product.Name">
+
+<label for="prdquantity">Quantity:</label>
+<input type="number" name="productQuantity" min="0" id="prdquantity" class="form-control mb-2" [(ngModel)]="product.Quantity">
+
+<label for="prdprice">Price:</label>
+<input type="number" name="productPrice" id="prdprice" min="1" class="form-control mb-2" [(ngModel)]="product.Price">
+
+<label for="prdimg">Image URL:</label>
+<input type="text" name="productImg" id="prdimg" class="form-control mb-2" [(ngModel)]="product.Img">
+
+<label for="categoryid">Select Category:</label>
+<select #SelectItem name="categories" id="categoryid" class="form-control mb-2" [(ngModel)]="product.CategoryID">
+    <option value="" *ngFor="let item of CategoryList" [value]="item.id">{{item.Name}}</option>
+</select>
+
+<button type="button" class="btn btn-primary mb-3 mt-4 btn-block" (click)="addProduct(product)">Add</button>

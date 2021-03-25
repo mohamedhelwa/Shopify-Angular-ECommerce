@@ -1,0 +1,26 @@
+<div class="container d-flex justify-content-center">
+    <div class="card card-product-grid card-lg" appShadowBorder [bgColor]="'#FFFFDF'">
+      <a href="#" class="img-wrap" data-abc="true"> <img src="../../../assets/Sweatshirt.png"> </a>
+        <div class="info-wrap">
+            <div class="row">
+                <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">Sweatshirt</a> <span class="rated">Clothes</span> </div>
+                <div class="col-md-3 col-xs-3">
+                    <div class="rating text-right"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="rated">Rated 4.0/5</span> </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-wrap-payment">
+            <div class="info-wrap">
+                <div class="row">
+                    <div class="col-md-9 col-xs-9">{{250 | currency: 'EGP'}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9 col-xs-9">Purchase Date: {{PurchaseDate | date: "short"}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-wrap"> <a href="#" class="btn btn-primary" data-abc="true"> Buy now </a></div>
+    </div>
+</div>
+
+<br><br><br>
